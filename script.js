@@ -13,6 +13,9 @@ document.querySelector("body").appendChild(fireTop);
 const fatCat = document.createElement("img");
 fatCat.src = './img/fatcat.webp';
 document.querySelector("body").appendChild(fatCat);
+fatCat.addEventListener('click', function() {
+  alert('Meow!');
+});
 
 const fireBottom = document.createElement("img");
 fireBottom.src = './img/fire.gif';
@@ -25,4 +28,8 @@ document.querySelector("body").appendChild(about);
 const desc = document.createElement("h2");
 desc.textContent = "I love cats, programming, and pizza";
 document.querySelector("body").appendChild(desc);
+
+
+
+
 
