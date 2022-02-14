@@ -1,4 +1,21 @@
 body {
-  background: blue;
+  background-image: url("img/stars.gif");
+  text-align: center;
 }
 
+h1 {
+  color: red;
+  text-align: center;
+}
+h2 {
+  color: red;
+  text-align: center;
+}
+h3 {
+  color: red;
+  text-align: center;
+}
+p {
+  color: red;
+  text-align: center;
+}
