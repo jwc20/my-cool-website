@@ -3,6 +3,11 @@ body {
   text-align: center;
 }
 
+div {
+  display: flex;
+  align-content: center;
+}
+
 h1 {
   color: red;
   text-align: center;
