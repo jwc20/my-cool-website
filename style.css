@@ -1,29 +1,16 @@
 body {
   background-image: url("img/stars.gif");
-  text-align: center;
-}
-
-div {
-  display: flex;
-  align-content: center;
-}
-
-h1 {
   color: red;
   text-align: center;
+  padding: 30px;
+  font-size:20px;
 }
 
-h2 {
-  color: red;
-  text-align: center;
-}
-
-h3 {
-  color: red;
-  text-align: center;
-}
-
-p {
-  color: red;
-  text-align: center;
+.center {
+  box-sizing: content-box;
+  margin-inline: auto;
+  max-inline-size: var(--measure);
+  display:flex;
+  flex-direction: column;
+  align-items: center;
 }
