@@ -128,6 +128,9 @@ document.querySelector("body").appendChild(h2);
 
 
 var sound = new Howl({
+  xhr: {
+    method: 'POST',
+  },
   src: ['./audio/ohshitimfeelingit.mp3']
 });
 
