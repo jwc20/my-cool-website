@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TEARS & related - Project Description</title>
+    <link rel="stylesheet" href="../styles.css" />
+    <style>
+        body {
+            min-height: 100vh;
+            padding: 2rem;
+            background-color: #fafafa;
+            color: #000;
+            font-family: Georgia, serif;
+            line-height: 1.5;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        .header h1 {
+            font-family: 'Staatliches', Impact, serif;
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+        .header p {
+            font-size: 1.1rem;
+            color: #444;
+        }
+        .content {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+            padding: 2rem;
+        }
+        h1, h2 {
+            font-family: 'Staatliches', Impact, serif;
+        }
+        footer {
+            text-align: center;
+            font-size: 0.9rem;
+            color: #666;
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid #ccc;
+        }
+        @media (max-width: 600px) {
+            body {
+                padding: 1rem;
+            }
+            .content {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>TEARS & related</h1>
+    </header>
+    <main class="content">
+        <p>Developed a platform that aggregates entry-level remote job listings for software engineers from various job boards. The system automatically updates and posts new job listings every 10 to 90 minutes. The project is self-hosted on a Hetzner cloud server, deployed with Docker, and utilizes Nginx to reverse proxy IP addresses. The tech stack includes Ruby on Rails for the backend, Python for data processing, React for the front end, and PostgreSQL for the database.</p>
+        <p><b>[Update 2024-11-03]</b><br>
+        Now using Flask and Jinja2 template for parsing data.</p>
+
+        <p><b>[Update May 2025]</b><br>
+        I ran out of money to pay for VPS server fees and it looks like LinkedIn added more measures to prevent scraping the jobs posts. :(</p>
+        
+
+        <h2>Links to repositories</h2>
+        <ol>
+            <li><a href="https://github.com/jwc20/tears_api">tears_api</a></li>
+            <li><a href="https://github.com/jwc20/tears-jobs">tears-jobs</a></li>
+            <li><a href="https://github.com/jwc20/tears-flask">tears-flask</a></li>
+            <li><a href="https://github.com/jwc20/prefect">prefect</a></li>
+            <li><a href="https://github.com/jwc20/changedetection.io">changedetection.io</a></li>
+        </ol>
+    </main>
+    <footer>
+        <p><a href="projects.html">&larr; Back to Projects</a></p>
+    </footer>
+</body>
+</html> 
