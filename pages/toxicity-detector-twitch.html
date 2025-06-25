@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Toxicity Detector with Twitch Chat - Project Description</title>
+        <link rel="stylesheet" href="../styles.css" />
+        <style>
+            body {
+                min-height: 100vh;
+                padding: 2rem;
+                background-color: #fafafa;
+                color: #000;
+                font-family: Georgia, serif;
+                line-height: 1.5;
+                max-width: 800px;
+                margin: 0 auto;
+            }
+            .header {
+                text-align: center;
+                margin-bottom: 2rem;
+            }
+            .header h1 {
+                font-family: "Staatliches", Impact, serif;
+                font-size: 2.5rem;
+                margin-bottom: 0.5rem;
+            }
+            .header p {
+                font-size: 1.1rem;
+                color: #444;
+            }
+            .content {
+                background: #fff;
+                border-radius: 8px;
+                box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+                padding: 2rem;
+            }
+            h1,
+            h2 {
+                font-family: "Staatliches", Impact, serif;
+            }
+            footer {
+                text-align: center;
+                font-size: 0.9rem;
+                color: #666;
+                margin-top: 3rem;
+                padding-top: 2rem;
+                border-top: 1px solid #ccc;
+            }
+            @media (max-width: 600px) {
+                body {
+                    padding: 1rem;
+                }
+                .content {
+                    padding: 1rem;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <header class="header">
+            <h1>Toxicity Detector with Twitch Chat</h1>
+        </header>
+        <main class="content">
+            <p>
+                I learned about Surge AI's toxicity dataset because I followed
+                their 
+                <a href="https://web.archive.org/web/20180820032156/http://blog.echen.me/">
+                  CEO's blog on ML long time ago.
+                </a>
+                 (Surge AI is a competitor of Scale AI,
+                which was acquired by Meta for $14.3 billion.) I wanted to use the dataset to
+                label whether chat messages are toxic and discovered Vowpal
+                Wabbit while browsing <a
+                    href="https://news.ycombinator.com/item?id=11862180"
+                    >Hacker News</a
+                >.
+            </p>
+            <p>
+                Vowpal Wabbit is a fast, scalable machine learning library. It's
+                used for email spam filtering,
+                <a href="https://github.com/eHarmony/vw-webservice"
+                    >eHarmony's recommendation system</a
+                >, and at
+                <a
+                    href="https://vimeo.com/63656541?turnstile=0.5inR26oQI9y0WUkzVZ4NC1lkfd9pWB-PQ8EgZtZOQ_Q3Tsk02YGs7eWkEverNHVwdraFZUc4GC_2tXNki0n7C59F89bFwSR17uXu6AtY9aPRSVF72iqwXi9XSZ80DU6hlQUzdOKKwaWCRpEPMTktz9d4PoVkogirqca8HLqpAYEFR0TAJUAS65nvjbhQvYupNQN8K82oH0jBpXRMdH3AIkS85FQlJDUcpHsqMaUxt96jp2knRcn3nmhp4MjZ0Yx949IvBlJa1dAtIXxcs5iXmT4O7QH3z6hay42SP1P3vIE-iq8X0F6O2rKCIVeRM9RHpbmdzKQ_nd4ycO1dCQwOHc12mv1iYagP0yxXGVoQtnjMJ6IOOBU892wN9sCeIk0SLt1DkLJhG-GhctRVeCviy6AyDtwP3Pwpb7jHzFXOImvGyjt_BauU_0e36TDSfmdsY67H576K75xZ97EOTi3k1CQs7aIPPJdxuO-ugLOUnRgimv-JJ0RFOyfLDrTbmQ1HMU8YKuK5xbBYS3rIAwjAs2AYyd4s23zt8fTSgb7HFqwHzNZIpPqZ7LB5wFDP0noyqKGbXiFBc0i5J5frgcMI7DkN5rrryGYmSYoWySTPzORAmKmbh1M98Rw4SPJUZ2rgfR9zpbp7OqsEzAOtbfFvMbmn4h5C05ByyFpBtzejfI6fmNcLM6_79bMug71ncpJOjOAIruhlNmRrS1heUF63dBexN9BI52-oy5cwsEUd4BSlBhAfkqguRS6D5NJ6KM3fUaxMkKpK5lAAUSuki_sEWTH-CunLcQxVIr5LtBw9QAhoOpb1ghEezPpQzlgk1PsiKNDa1nQ9p36hxEpfTShBVezCzgS_O50iuP9doVmqSNjUiDqoriOl8ZBW3x-GsGjM.XpSfKGI9fvpvQlHiFa-TUw.9979a78994d5235b34d5f89a1423e41e2b653841554bc0db0fce05dcb3f48b39"
+                    >Tumblr</a
+                >. Mike Izbicki even
+                <a
+                    href="https://izbicki.me/blog/teaching-open-source-in-north-korea.html"
+                    >taught it in North Korea</a
+                >, which is pretty wild.
+            </p>
+            <p>
+                I bought Yury Kashnitsky's
+                <a href="https://mlcourse.ai/book/index.html">MLCourse.ai</a> which covers various ML techniques and some Vowpal Wabbit.
+            </p>
+            <p>
+              While building it, I discovered that determining if a message
+              is truly toxic (not just profanity filtering) 
+              <a href="https://web.archive.org/web/20230802210834/https://www.surgehq.ai/blog/are-popular-toxicity-models-simply-profanity-detectors">
+                is really
+                difficult.
+              </a>
+              For example, "this is fucking cool!" contains
+              profanity but isn't toxic.
+            </p>
+            <p>
+                The most interesting thing I learned from this project is that
+                you can use Firebase's Firestore for free as long as you store
+                and retrieve data in nested collections and documents. However,
+                when there were lots of incoming messages, sometimes the chat
+                messages weren't stored in Firebase. This made it unreliable as
+                a chat archive, which was disappointing and kinda cringe.
+            </p>
+        </main>
+        <footer>
+            <p><a href="projects.html">&larr; Back to Projects</a></p>
+        </footer>
+    </body>
+</html>

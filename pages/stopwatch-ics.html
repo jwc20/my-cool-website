@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stopwatch-ics - Project Description</title>
+    <link rel="stylesheet" href="../styles.css" />
+    <style>
+        body {
+            min-height: 100vh;
+            padding: 2rem;
+            background-color: #fafafa;
+            color: #000;
+            font-family: Georgia, serif;
+            line-height: 1.5;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        .header h1 {
+            font-family: 'Staatliches', Impact, serif;
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+        .header p {
+            font-size: 1.1rem;
+            color: #444;
+        }
+        .content {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+            padding: 2rem;
+        }
+        h1, h2 {
+            font-family: 'Staatliches', Impact, serif;
+        }
+        footer {
+            text-align: center;
+            font-size: 0.9rem;
+            color: #666;
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid #ccc;
+        }
+        @media (max-width: 600px) {
+            body {
+                padding: 1rem;
+            }
+            .content {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>Stopwatch-ics</h1>
+    </header>
+    <main class="content">
+        <p>I created this stopwatch app to track what I did during the day. Before building this, I used timeanddate.com's stopwatch feature to track time using the split button and manually inputting task names. I would export the time data and put it into an Excel file, which was pretty tedious.</p>
+        <p>Since ICS files can be imported directly into calendar apps, I wanted to build a stopwatch that could split time, let me input task names, and export everything as an ICS file. This way I could import it straight into Google Calendar and actually visualize what I did each day.</p>
+        <p>I still use this project most days and I'm really proud of it.</p> 
+        <p>When I was interviewing for a Machine Learning Researcher position at a company that develops facial recognition for Korean airports, the CTO accused me of copying this project from somewhere else. When I asked him to show me a similar app, he couldn't respond.</p>
+    </main>
+    <footer>
+        <p><a href="projects.html">&larr; Back to Projects</a></p>
+    </footer>
+</body>
+</html> 

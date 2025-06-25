@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Get Channel Talk - Project Description</title>
+        <link rel="stylesheet" href="../styles.css" />
+        <style>
+            body {
+                min-height: 100vh;
+                padding: 2rem;
+                background-color: #fafafa;
+                color: #000;
+                font-family: Georgia, serif;
+                line-height: 1.5;
+                max-width: 800px;
+                margin: 0 auto;
+            }
+            .header {
+                text-align: center;
+                margin-bottom: 2rem;
+            }
+            .header h1 {
+                font-family: "Staatliches", Impact, serif;
+                font-size: 2.5rem;
+                margin-bottom: 0.5rem;
+            }
+            .header p {
+                font-size: 1.1rem;
+                color: #444;
+            }
+            .content {
+                background: #fff;
+                border-radius: 8px;
+                box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+                padding: 2rem;
+            }
+            h1,
+            h2 {
+                font-family: "Staatliches", Impact, serif;
+            }
+            footer {
+                text-align: center;
+                font-size: 0.9rem;
+                color: #666;
+                margin-top: 3rem;
+                padding-top: 2rem;
+                border-top: 1px solid #ccc;
+            }
+            @media (max-width: 600px) {
+                body {
+                    padding: 1rem;
+                }
+                .content {
+                    padding: 1rem;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <header class="header">
+            <h1>Get Channel Talk</h1>
+        </header>
+        <main class="content">
+            <p>
+                This is a Flask web app using the Channel Talk Open API SDK to get chat message data. I built this because at my first company, they made us write down start time, end time, summary or chat log, which customer we interacted with, and other details in an ancient C# app every time we interacted with a customer by phone or <a href="https://channel.io/">Channel Talk.</a>
+            </p>
+            <p>
+                Using this app reduced a huge amount of time spent typing everything down. (You could say I reduced employee data entry time by 70%!)
+            </p>
+            <p>
+                I wish I had known more about GraphQL when I did this project because I had to do a lot of data cleaning after receiving responses from the Open API requests.
+            </p>
+            <p>
+                Since the company only uses Microsoft Windows Servers, I used <a href="https://nssm.cc/">NSSM (the Non-Sucking Service Manager)</a> for deployment.
+            </p>
+        </main>
+        <footer>
+            <p><a href="projects.html">&larr; Back to Projects</a></p>
+        </footer>
+    </body>
+</html>
