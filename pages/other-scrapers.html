@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Other Scrapers - Project Description</title>
+        <link rel="stylesheet" href="../styles.css" />
+        <style>
+            body {
+                min-height: 100vh;
+                padding: 2rem;
+                background-color: #fafafa;
+                color: #000;
+                font-family: Georgia, serif;
+                line-height: 1.5;
+                max-width: 800px;
+                margin: 0 auto;
+            }
+            .header {
+                text-align: center;
+                margin-bottom: 2rem;
+            }
+            .header h1 {
+                font-family: "Staatliches", Impact, serif;
+                font-size: 2.5rem;
+                margin-bottom: 0.5rem;
+            }
+            .header p {
+                font-size: 1.1rem;
+                color: #444;
+            }
+            .content {
+                background: #fff;
+                border-radius: 8px;
+                box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+                padding: 2rem;
+            }
+            h1,
+            h2,
+            h3 {
+                font-family: "Staatliches", Impact, serif;
+            }
+            .see-also {
+                margin-top: 2rem;
+            }
+            .see-also ul {
+                list-style-type: disc;
+                padding-left: 2rem;
+            }
+            .see-also li {
+                margin-bottom: 0.5rem;
+            }
+            footer {
+                text-align: center;
+                font-size: 0.9rem;
+                color: #666;
+                margin-top: 3rem;
+                padding-top: 2rem;
+                border-top: 1px solid #ccc;
+            }
+            @media (max-width: 600px) {
+                body {
+                    padding: 1rem;
+                }
+                .content {
+                    padding: 1rem;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <header class="header">
+            <h1>Other Scrapers</h1>
+        </header>
+        <main class="content">
+            <p>
+                I had so much fun making the IWF scraper API that I decided to build more scrapers. I wanted to create scrapers for getting job posts, so I made one for YCombinator's WorkAtAStartup.com [1] and Wellfound [3], and I forked and edited a LinkedIn scraper script [4].
+            </p>
+            <p>
+                I used the LinkedIn script frequently in my terminal until I built a web app called <a href="https://github.com/jwc20/tears-jobs">tears-jobs</a> for getting recent job posts. I also created fcis-api to fetch workplace fatality and catastrophe reports from the United States Department of Labor website.
+            </p>
+            <p>
+                Every scraper uses BeautifulSoup4 for text parsing. For waasu-api and wellfound-scraper, I used Selenium for logging in. When I don't need to login to get data, I prefer using Splash headless browser instead of Selenium (like I did for the LinkedIn scraper script).
+            </p>
+            <p>
+                The Wellfound scraper was hard to implement and test because it actively blocks scrapers. FCIS-api had no blocking at first, but now it does. Waasu-api seems to be working fine because WorkAtAStartup doesn't have any blocking measures.
+            </p>
+            <p>
+                Ever since LLMs came out, scraping has become a lot easier for selecting data with BeautifulSoup. The real challenges now lie in bypassing captcha and using proxy rotation to avoid detection. Most worthwhile websites have these protections.
+            </p>
+            <p>
+                Unless you use services for captcha solving and proxy rotation, you spend a lot of time building these components for your scraper. It gets boring integrating these features, so I probably won't be doing more scraper projects in the future.
+            </p>
+            <h3>Reference</h3>
+            <ol>
+              <li>
+                  <a href="https://github.com/jwc20/waasuapi"
+                      >waasuapi</a
+                  >
+              </li>
+              <li>
+                  <a href="https://github.com/jwc20/fcisapi"
+                      >fcisapi</a
+                  >
+              </li>
+              <li>
+                  <a
+                      href="https://github.com/jwc20/wellfound-scraper"
+                      >wellfound-scraper</a
+                  >
+              </li>
+              <li>
+                  <a
+                      href="https://github.com/jwc20/linkedin-scraper-jobs"
+                      >linkedin-scraper-jobs</a
+                  >
+              </li>
+          </ol>
+            
+            <div class="see-also">
+                <h3>See also:</h3>
+                <ul>
+                    <li><a href="https://scrapeops.io/web-scraping-playbook/">ScrapeOps Web Scraping Playbook</a></li>
+                    <li><a href="https://blog.apify.com/web-scraping-2024/">Web Scraping in 2024 - Apify Blog</a></li>
+                    <li><a href="https://blog.furas.pl/python-scraping-tools-and-modules-for-scraping-update-2022-03-28-gb.html">Python Scraping Tools and Modules</a></li>
+                    <li><a href="https://cushychicken.github.io/more-web-scraper-notes/">More Web Scraper Notes</a></li>
+                    <li><a href="https://web.archive.org/web/20220315000000*/https://slawomirtulski.com/creepy_scraper">Creepy Scraper (Archive)</a></li>
+                    <li><a href="https://github.com/tulski-s/pydata_london_38/blob/master/Robust_extraction_of_web_data_with_Python.ipynb">Robust Extraction of Web Data with Python</a></li>
+                    <li><a href="https://simonwillison.net/2019/Oct/10/pge-outages">Simon Willison on PG&E Outages</a></li>
+                    <li><a href="https://scrapeops.io/python-web-scraping-playbook/python-aiohttp-proxy-rotation/">Python Aiohttp Proxy Rotation</a></li>
+                </ul>
+            </div>
+        </main>
+        <footer>
+            <p><a href="projects.html">&larr; Back to Projects</a></p>
+        </footer>
+    </body>
+</html>

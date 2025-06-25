@@ -14,7 +14,7 @@
                 --family-special: "Staatliches", Impact, serif;
                 color: var(--color-dark);
                 scroll-behavior: smooth;
-                font-size: calc(1rem + 0.5vw);
+                font-size: calc(0.6rem + 0.3vw);
                 font-family: var(--family-normal);
                 line-height: 1.4;
             }
@@ -80,6 +80,7 @@
                 gap: 3px;
                 margin-bottom: 3px;
                 background-color: var(--color-dark);
+                border: 1px solid var(--color-dark);
             }
 
             .project-content {
@@ -160,6 +161,16 @@
                 text-transform: uppercase;
             }
 
+            .project-content p {
+                margin-bottom: 1.5rem;
+            }
+
+            .project-content ol {
+                border: 1px solid var(--color-dark);
+                padding: 1rem;
+                list-style-position: inside;
+            }
+
             /* Footer */
             footer {
                 text-align: center;
@@ -219,6 +230,9 @@
                 <li class="project">
                     <div class="project-content">
                         <h2>iwf-api & related</h2>
+                        <p><a href="iwf-api.html">Read description</a></p>
+
+                        <!-- <h3>Reference</h3> -->
                         <ol>
                             <li>
                                 <a href="https://github.com/jwc20/twler"
@@ -277,13 +291,18 @@
                             </li>
                         </ol>
                     </div>
-                    <a href="#" class="project-link" style="background-image: url('../img/twler.gif');">
+                    <a
+                        href="https://github.com/jwc20/twler"
+                        class="project-link"
+                        style="background-image: url('../img/twler.gif')"
+                    >
                     </a>
                 </li>
 
                 <li class="project">
                     <div class="project-content">
                         <h2>TEARS & related</h2>
+                        <p><b>Work in progress</b></p>
                         <ol>
                             <li>
                                 <a href="https://github.com/jwc20/tears_api"
@@ -313,13 +332,18 @@
                             </li>
                         </ol>
                     </div>
-                    <a href="#" class="project-link" style="background-image: url('../img/tears.jpeg');">
+                    <a
+                        href="https://github.com/jwc20/tears_api"
+                        class="project-link"
+                        style="background-image: url('../img/tears.jpeg')"
+                    >
                     </a>
                 </li>
 
                 <li class="project">
                     <div class="project-content">
                         <h2>stopwatch-ics</h2>
+                        <p><a href="stopwatch-ics.html">Read description</a></p>
                         <ol>
                             <li>
                                 <a
@@ -334,13 +358,20 @@
                             </li>
                         </ol>
                     </div>
-                    <a href="#" class="project-link no-image" style="background-image: url('../img/stopwatch-ics.gif');">
+                    <a
+                        href="https://inspiring-cupcake-f443e6.netlify.app/"
+                        class="project-link no-image"
+                        style="
+                            background-image: url('../img/stopwatch-ics.gif');
+                        "
+                    >
                     </a>
                 </li>
 
                 <li class="project">
                     <div class="project-content">
                         <h2>OnnuriMission</h2>
+                        <p><a href="onnurimission.html">Read description</a></p>
                         <ol>
                             <li>
                                 <a href="https://jwc20.github.io/OnnuriMission/"
@@ -354,56 +385,113 @@
                             </li>
                         </ol>
                     </div>
-                    <a href="#" class="project-link" style="background-image: url('../img/onnuri-mission.jpg');">
+                    <a
+                        href="https://jwc20.github.io/OnnuriMission/"
+                        class="project-link"
+                        style="
+                            background-image: url('../img/onnuri-mission.jpg');
+                        "
+                    >
                     </a>
                 </li>
 
+                <li class="project">
+                    <div class="project-content">
+                        <h2>barbell loading calculator</h2>
+                        <p>
+                            <a href="barbell-loading-calculator.html"
+                                >Read description</a
+                            >
+                        </p>
+                        <ol>
+                            <li>
+                                <a href="editor.p5js.org/jcw00/full/PnIhXM3qC"
+                                    >barbellLoadingCalculator (Demo)</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="https://github.com/jwc20/barbellLoadingCalculator"
+                                    >barbellLoadingCalculator (Github)</a
+                                >
+                            </li>
+                        </ol>
+                    </div>
+                    <a
+                        href="editor.p5js.org/jcw00/full/PnIhXM3qC"
+                        class="project-link"
+                        style="
+                            background-image: url('../img/barbell-calculator.jpg');
+                        "
+                    >
+                    </a>
+                </li>
 
                 <li class="project">
-                  <div class="project-content">
-                      <h2>barbell loading calculator</h2>
-                      <ol>
-                          <li>
-                              <a href="editor.p5js.org/jcw00/full/PnIhXM3qC"
-                                  >barbellLoadingCalculator (Demo)</a
-                              >
-                          </li>
-                          <li>
-                              <a
-                                  href="https://github.com/jwc20/barbellLoadingCalculator"
-                                  >barbellLoadingCalculator (Github)</a
-                              >
-                          </li>
-                      </ol>
-                  </div>
-                  <a href="#" class="project-link" style="background-image: url('../img/barbell-calculator.jpg');">
-                  </a>
-              </li>
+                    <div class="project-content">
+                        <h2>tic tac toe with react</h2>
+                        <p>
+                            <a href="tic-tac-toe-react.html"
+                                >Read description</a
+                            >
+                        </p>
+                        <ol>
+                            <li>
+                                <a href="https://jwc20-tttr.netlify.app/"
+                                    >tic-tac-toe-react (Demo)</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="https://github.com/jwc20/tic-tac-toe-react"
+                                    >tic-tac-toe-react (Github)</a
+                                >
+                            </li>
+                        </ol>
+                    </div>
+                    <a
+                        href="https://jwc20-tttr.netlify.app/"
+                        class="project-link"
+                        style="
+                            background-image: url('../img/tictactoe-react.gif');
+                        "
+                    >
+                    </a>
+                </li>
 
-              <li class="project">
-                  <div class="project-content">
-                      <h2>tic tac toe with react</h2>
-                      <ol>
-                          <li>
-                              <a href="https://jwc20-tttr.netlify.app/"
-                                  >tic-tac-toe-react (Demo)</a
-                              >
-                          </li>
-                          <li>
-                              <a
-                                  href="https://github.com/jwc20/tic-tac-toe-react"
-                                  >tic-tac-toe-react (Github)</a
-                              >
-                          </li>
-                      </ol>
-                  </div>
-                  <a href="#" class="project-link" style="background-image: url('../img/tictactoe-react.gif');">
-                  </a>
-              </li>
+                <li class="project">
+                    <div class="project-content">
+                        <h2>Leetcode logging</h2>
+                        <p>
+                            <a href="leetcode-logging.html">Read description</a>
+                        </p>
+                        <ol>
+                            <li>
+                                <a
+                                    href="https://github.com/jwc20/fluffy-fortnight"
+                                    >fluffy-fortnight</a
+                                >
+                            </li>
+                        </ol>
+                    </div>
+                    <a
+                        href="https://github.com/jwc20/fluffy-fortnight"
+                        class="project-link"
+                        style="
+                            background-image: url('../img/fluffy-fortnight.jpg');
+                        "
+                    >
+                    </a>
+                </li>
 
                 <li class="project">
                     <div class="project-content">
                         <h2>Profanity Detector for Twitch Chat & related</h2>
+                        <p>
+                            <a href="toxicity-detector-twitch.html"
+                                >Read description</a
+                            >
+                        </p>
                         <ol>
                             <li>
                                 <a
@@ -418,8 +506,13 @@
                                 >
                             </li>
                             <li>
+                                <a href="omf-scene24.vercel.app/wsTest"
+                                    >omfScene24 (Demo)</a
+                                >
+                            </li>
+                            <li>
                                 <a href="https://github.com/jwc20/omfScene24"
-                                    >omfScene24</a
+                                    >omfScene24 (Github)</a
                                 >
                             </li>
                             <li>
@@ -448,35 +541,36 @@
                             </li>
                         </ol>
                     </div>
-                    <a href="#" class="project-link" style="background-image: url('../img/omfscene24.jpg');">
+                    <a
+                        href="https://github.com/jwc20/twitch-chat-archive"
+                        class="project-link"
+                        style="background-image: url('../img/omfscene24.jpg')"
+                    >
                     </a>
                 </li>
 
                 <li class="project">
                     <div class="project-content">
                         <h2>Other Scrapers</h2>
+                        <p><a href="other-scrapers.html">Read description</a></p>
                         <ol>
                             <li>
-                                waasu-api:
                                 <a href="https://github.com/jwc20/waasuapi"
                                     >waasuapi</a
                                 >
                             </li>
                             <li>
-                                fcis-api:
                                 <a href="https://github.com/jwc20/fcisapi"
                                     >fcisapi</a
                                 >
                             </li>
                             <li>
-                                wellfound-scrapers:
                                 <a
                                     href="https://github.com/jwc20/wellfound-scraper"
                                     >wellfound-scraper</a
                                 >
                             </li>
                             <li>
-                                linkedin scraper:
                                 <a
                                     href="https://github.com/jwc20/linkedin-scraper-jobs"
                                     >linkedin-scraper-jobs</a
@@ -484,13 +578,18 @@
                             </li>
                         </ol>
                     </div>
-                    <a href="#" class="project-link" style=" background-image: url('../img/waasu-api.jpg');">
+                    <a
+                        href="https://github.com/jwc20/waasuapi"
+                        class="project-link"
+                        style="background-image: url('../img/waasu-api.jpg')"
+                    >
                     </a>
                 </li>
 
                 <li class="project">
                     <div class="project-content">
                         <h2>get-channel-talk</h2>
+                        <p><a href="get-channel-talk.html">Read description</a></p>
                         <ol>
                             <li>
                                 <a
@@ -500,29 +599,20 @@
                             </li>
                         </ol>
                     </div>
-                    <a href="#" class="project-link" style="background-image: url('../img/get-channel-talk.png');">
-                    </a>
-                </li>
-
-                <li class="project">
-                    <div class="project-content">
-                        <h2>tech interview prep</h2>
-                        <ol>
-                            <li>
-                                <a
-                                    href="https://github.com/jwc20/tech_interview_prep"
-                                    >tech_interview_prep</a
-                                >
-                            </li>
-                        </ol>
-                    </div>
-                    <a href="#" class="project-link" style="background-image: url('../img/wall-and-gromit-1.png');">
+                    <a
+                        href="https://github.com/jwc20/get-channel-talk"
+                        class="project-link"
+                        style="
+                            background-image: url('../img/get-channel-talk.png');
+                        "
+                    >
                     </a>
                 </li>
 
                 <li class="project">
                     <div class="project-content">
                         <h2>config file</h2>
+                        <p>My config dotfiles for Neovim, Fish, and etc.</p>
                         <ol>
                             <li>
                                 <a href="https://github.com/jwc20/config"
@@ -531,23 +621,13 @@
                             </li>
                         </ol>
                     </div>
-                    <a href="#" class="project-link" style="background-image: url('../img/wall-and-gromit-2.png');">
-                    </a>
-                </li>
-
-                <li class="project">
-                    <div class="project-content">
-                        <h2>Leetcode logging</h2>
-                        <ol>
-                            <li>
-                                <a
-                                    href="https://github.com/jwc20/fluffy-fortnight"
-                                    >fluffy-fortnight</a
-                                >
-                            </li>
-                        </ol>
-                    </div>
-                    <a href="#" class="project-link" style="background-image: url('../img/fluffy-fortnight.jpg');">
+                    <a
+                        href="https://github.com/jwc20/config"
+                        class="project-link"
+                        style="
+                            background-image: url('../img/wall-and-gromit-1.png');
+                        "
+                    >
                     </a>
                 </li>
 
@@ -582,17 +662,24 @@
                             <li>
                                 <a
                                     href="https://jwc20.github.io/my-cool-website/pages/old.html"
-                                    >old homepage</a
+                                    >old homepage (do not click!)</a
                                 >
                             </li>
                         </ol>
                     </div>
-                    <a href="#" class="project-link" style="background-image: url('../img/old-homepage.jpg');">
+                    <a
+                        href="https://jwc20.github.io/my-cool-website/pages/old.html"
+                        class="project-link"
+                        style="background-image: url('../img/old-homepage.jpg')"
+                    >
                     </a>
                 </li>
             </ul>
         </main>
 
-        <footer></footer>
+
+        <footer>
+          <p><a href="../index.html">&larr; Back to Home</a></p>
+      </footer>
     </body>
 </html>

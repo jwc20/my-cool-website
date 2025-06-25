@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>iwf-api & related - Project Description</title>
+    <link rel="stylesheet" href="../styles.css" />
+    <style>
+        body {
+            min-height: 100vh;
+            padding: 2rem;
+            background-color: #fafafa;
+            color: #000;
+            font-family: Georgia, serif;
+            line-height: 1.5;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        .header h1 {
+            font-family: 'Staatliches', Impact, serif;
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+        .header p {
+            font-size: 1.1rem;
+            color: #444;
+        }
+        .content {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+            padding: 2rem;
+        }
+        h1, h2 {
+            font-family: 'Staatliches', Impact, serif;
+        }
+        footer {
+            text-align: center;
+            font-size: 0.9rem;
+            color: #666;
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid #ccc;
+        }
+        @media (max-width: 600px) {
+            body {
+                padding: 1rem;
+            }
+            .content {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>Twler</h1>
+    </header>
+    <main class="content">
+        <p>This project started back when I was in university in 2019. I wanted to review Python to prepare for my class, Introduction to Mathematical Software (MATH 157), which used Python extensively. I figured the best way to learn was to work on something I was genuinely interested in so I'd stay motivated.</p>
+        <p>I decided to build a scraper for competition results from iwf.org (which later became iwf.sport). At the time, I knew absolutely nothing about web scraping, so I bought a Udemy course on Scrapy to get started.</p>
+        <p>While working through the course, I created my first version: wl_res <a href="https://github.com/jwc20/wl_res">[8]</a>. It was basically a Python script using Scrapy and Selenium's headless browser. But instead of scraping text from webpages using tools like BeautifulSoup, I used Selenium to open a list of pages for each weightlifting event and automatically click the "download CSV" button to get the results.</p>
+        <p>During testing, I got a bit overzealous and ran the script to download all the event files at once. This meant opening 100+ event result pages simultaneously and clicking all the download buttons. I accidentally took down the entire website for 15 minutes. Needless to say, I never ran that script again after getting the files I needed. (You can find those CSV files in my iwf_clean_format_results <a href="https://github.com/jwc20/iwf_clean_format_results">[9]</a> repository, where I wrote additional scripts to clean and format the data for better viewing.)</p>
+        <p>After university, I enrolled in a full-stack software engineering bootcamp. I knew this weightlifting project would be my final capstone. I wrote a new scraper API using Ruby and Nokogiri, and even created a Ruby gem <a href="https://github.com/jwc20/iwf_ruby">[3]</a>. Looking back, this was probably not the best choice since Nokogiri was already outdated and should've used Python and BeautifulSoup.</p>
+        <p>I built the backend in Ruby on Rails <a href="https://github.com/jwc20/twler-backend">[7]</a> and the frontend in React.js <a href="https://github.com/jwc20/twler-frontend-new">[5]</a><a href="https://github.com/jwc20/twler-frontend">[6]</a>. I'm not proud of how this version turned out. Instead of creating a simple website that displayed weightlifting results with basic functionality (login, authentication, basic CRUD operations), I got distracted and spent way too much time trying to learn TailwindCSS and D3.js. (I was really excited about D3.js at the time after reading Shirley Wu's blogs and her Film Flowers project.) Looking back at this project now, they probably shouldn't have let me graduate!</p>
+        <p>After bootcamp, I wanted to do more projects in Python. Rather than starting something new, I decided to revisit the Ruby scraper API (iwf_ruby) and rewrite it in Python. Before diving in, I made sure there weren't any similar projects for scraping IWF data and looked at other Python scraper APIs for inspiration.</p>
+        <p>I found this <a href="https://github.com/sskender/pornhub-api">project on Github,</a> and I was impressed by its simple structure and code readability. So I decided to follow their architecture to build my API. (For the record, I've never actually used that API, I just liked their code structure!)</p>
+        <p>I built iwf_api with Python and BeautifulSoup4 <a href="https://github.com/jwc20/iwf_api">[2]</a>, later packaging it and uploading it to PyPI. (I can't find it now, maybe I deleted it?)</p>
+        <p>This project was my first time someone else make a <a href="https://github.com/jwc20/iwf_api/pull/11">pull request.</a> (I believe they used this api on their own <a href="https://github.com/euanwm/OpenWeightlifting">project</a> until they refactored their backend code from Python to Go.</p>
+        <p>Afterwards, I built a full-stack application for "twler" using Django and React <a href="https://github.com/jwc20/twler">[1]</a>. At the time, I was super excited about IPFS (InterPlanetary File System) because I'd discovered you could deploy websites with it. This version of twler had no traditional database. Instead, it fetched files stored in an IPFS node, which meant it took forever to load data for each event.</p>
+        <p>It also depended heavily on an unmaintained library called ipfshttpclient. I actually had to fork the repo and change the version number in the settings just to make it work <a href="https://github.com/jwc20/py-ipfs-http-client">[10]</a>. I deployed twler to Pinata Cloud <a href="https://github.com/jwc20/twler">[1]</a>, but soon after, Pinata stopped supporting website deployments. Which made this whole project a huge waste of time.</p>
+        <p>If I were to rebuild this project today, I'd use Django (it's great for data-intensive applications) with basic HTML and Jinja templating. No overengineering. I'd use PostgreSQL for the database and deploy serverlessly with Zappa (AWS Lambda), using its scheduling functions to periodically run the scraper and update the database.</p>
+        <p>As a side note, I also spent some time learning about TrueSkill<a href="https://github.com/jwc20/trueskill-notes">[4]</a> (Microsoft's ranking algorithm for matchmaking in games like Halo). I thought maybe I could use it to rank athletes based on their results instead of using the official Sinclair Formula or Wilks coefficient. While the algorithm is fascinating, it's not really suitable for this use case since it's designed for team matches like 4v4 or 1v1. Something like Chess's ELO rating system would probably be more appropriate.</p>
+        <h2>Links to repositories</h2>
+        <ol>
+            <li><a href="https://github.com/jwc20/twler">twler</a></li>
+            <li><a href="https://github.com/jwc20/iwf_api">iwf_api</a></li>
+            <li><a href="https://github.com/jwc20/iwf_ruby">iwf_ruby</a></li>
+            <li><a href="https://github.com/jwc20/trueskill-notes">trueskill-notes</a></li>
+            <li><a href="https://github.com/jwc20/twler-frontend-new">twler-frontend-new</a></li>
+            <li><a href="https://github.com/jwc20/twler-frontend">twler-frontend</a></li>
+            <li><a href="https://github.com/jwc20/twler-backend">twler-backend</a></li>
+            <li><a href="https://github.com/jwc20/wl_res">wl_res</a></li>
+            <li><a href="https://github.com/jwc20/iwf_clean_format_results">iwf_clean_format_results</a></li>
+            <li><a href="https://github.com/jwc20/py-ipfs-http-client">py-ipfs-http-client</a></li>
+        </ol>
+    </main>
+    <footer>
+        <p><a href="projects.html">&larr; Back to Projects</a></p>
+    </footer>
+</body>
+</html> 
