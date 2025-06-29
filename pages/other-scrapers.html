@@ -74,16 +74,16 @@
         </header>
         <main class="content">
             <p>
-                I had so much fun making the IWF scraper API that I decided to build more scrapers. I wanted to create scrapers for getting job posts, so I made one for YCombinator's WorkAtAStartup.com [1] and Wellfound [3], and I forked and edited a LinkedIn scraper script [4].
+                I had so much fun making the IWF scraper API that I decided to build more scrapers. I wanted to create scrapers for getting job posts, so I made one for YCombinator's <a href="https://github.com/jwc20/waasuapi">WorkAtAStartup.com</a> [1] and <a href="https://github.com/jwc20/wellfound-scraper">Wellfound</a> [3], and I forked and edited a <a href="https://github.com/jwc20/linkedin-scraper-jobs">LinkedIn scraper script</a> [4].
             </p>
             <p>
-                I used the LinkedIn script frequently in my terminal until I built a web app called <a href="https://github.com/jwc20/tears-jobs">tears-jobs</a> for getting recent job posts. I also created fcis-api to fetch workplace fatality and catastrophe reports from the United States Department of Labor website.
+                I used the LinkedIn script frequently in my terminal until I built a web app called <a href="https://github.com/jwc20/tears-jobs">tears-jobs</a> for getting recent job posts. I also created <a href="https://github.com/jwc20/fcisapi">fcis-api</a> to fetch workplace fatality and catastrophe reports from the United States Department of Labor website.
             </p>
             <p>
-                Every scraper uses BeautifulSoup4 for text parsing. For waasu-api and wellfound-scraper, I used Selenium for logging in. When I don't need to login to get data, I prefer using Splash headless browser instead of Selenium (like I did for the LinkedIn scraper script).
+                Every scraper uses BeautifulSoup4 for text parsing. For <a href="https://github.com/jwc20/waasuapi">waasu-api</a> and <a href="https://github.com/jwc20/wellfound-scraper">wellfound-scraper</a>, I used Selenium for logging in. When I don't need to login to get data, I prefer using Splash headless browser[5] instead of Selenium.
             </p>
             <p>
-                The Wellfound scraper was hard to implement and test because it actively blocks scrapers. FCIS-api had no blocking at first, but now it does. Waasu-api seems to be working fine because WorkAtAStartup doesn't have any blocking measures.
+                The <a href="https://github.com/jwc20/wellfound-scraper">Wellfound scraper</a> was hard to implement and test because it actively blocks scrapers. <a href="https://github.com/jwc20/fcisapi">FCIS-api</a> had no blocking at first, but now it does. <a href="https://github.com/jwc20/waasuapi">Waasu-api</a> seems to be working fine because WorkAtAStartup doesn't have any blocking measures.
             </p>
             <p>
                 Ever since LLMs came out, scraping has become a lot easier for selecting data with BeautifulSoup. The real challenges now lie in bypassing captcha and using proxy rotation to avoid detection. Most worthwhile websites have these protections.
@@ -113,6 +113,12 @@
                   <a
                       href="https://github.com/jwc20/linkedin-scraper-jobs"
                       >linkedin-scraper-jobs</a
+                  >
+              </li>
+              <li>
+                  <a
+                      href="https://github.com/jwc20/jaapi"
+                      >job aggregate api</a
                   >
               </li>
           </ol>
