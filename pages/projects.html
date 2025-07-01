@@ -1,701 +1,643 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Projects - Jae</title>
-        <style>
-            @import url("https://fonts.googleapis.com/css2?family=Staatliches:wght@400&display=swap");
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-X89EB479GX"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-            :root {
-                --color-light: #fafafa;
-                --color-dark: #000;
-                --family-normal: Georgia, serif;
-                --family-special: "Staatliches", Impact, serif;
-                color: var(--color-dark);
-                scroll-behavior: smooth;
-                font-size: calc(0.6rem + 0.3vw);
-                font-family: var(--family-normal);
-                line-height: 1.4;
-            }
+      gtag("config", "G-X89EB479GX");
+    </script>
+    <title>Projects - Jae</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Staatliches:wght@400&display=swap");
 
-            * {
-                box-sizing: border-box;
-                margin: 0;
-                padding: 0;
-                color: inherit;
-            }
+      :root {
+        --color-light: #fafafa;
+        --color-dark: #000;
+        --family-normal: Georgia, serif;
+        --family-special: "Staatliches", Impact, serif;
+        color: var(--color-dark);
+        scroll-behavior: smooth;
+        font-size: calc(0.6rem + 0.3vw);
+        font-family: var(--family-normal);
+        line-height: 1.4;
+      }
 
-            body {
-                min-height: 100vh;
-                padding: 2rem;
-                background-color: var(--color-light);
-                display: flex;
-                flex-direction: column;
-                justify-content: flex-start;
-                align-items: center;
-            }
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        color: inherit;
+      }
 
-            /* Header */
-            .header {
-                width: 100%;
-                max-width: 1200px;
-                text-align: center;
-                margin-bottom: 3rem;
-                padding: 2rem 0;
-                border-bottom: 2px solid var(--color-dark);
-            }
+      body {
+        min-height: 100vh;
+        padding: 2rem;
+        background-color: var(--color-light);
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+      }
 
-            .header h1 {
-                font-family: var(--family-special);
-                font-size: clamp(2rem, 6vw, 4rem);
-                font-weight: 400;
-                line-height: 1;
-                text-transform: uppercase;
-                margin-bottom: 1rem;
-            }
+      /* Header */
+      .header {
+        width: 100%;
+        max-width: 1200px;
+        text-align: center;
+        margin-bottom: 3rem;
+        padding: 2rem 0;
+        border-bottom: 2px solid var(--color-dark);
+      }
 
-            .header p {
-                font-size: clamp(1rem, 2vw, 1.2rem);
-                line-height: 1.4;
-                max-width: 60ch;
-                margin: 0 auto;
-            }
+      .header h1 {
+        font-family: var(--family-special);
+        font-size: clamp(2rem, 6vw, 4rem);
+        font-weight: 400;
+        line-height: 1;
+        text-transform: uppercase;
+        margin-bottom: 1rem;
+      }
 
-            .header a {
-                color: var(--color-dark);
-                text-decoration: underline;
-            }
+      .header p {
+        font-size: clamp(1rem, 2vw, 1.2rem);
+        line-height: 1.4;
+        max-width: 60ch;
+        margin: 0 auto;
+      }
 
-            /* Projects List */
-            .projects {
-                width: 100%;
-                max-width: 1200px;
-                list-style: none;
-            }
+      .header a {
+        color: var(--color-dark);
+        text-decoration: underline;
+      }
 
-            .project {
-                display: grid;
-                grid-template-columns: 1fr 1fr;
-                gap: 3px;
-                margin-bottom: 3px;
-                background-color: var(--color-dark);
-                border: 1px solid var(--color-dark);
-            }
+      /* Projects List */
+      .projects {
+        width: 100%;
+        max-width: 1200px;
+        list-style: none;
+      }
 
-            .project-content {
-                background-color: var(--color-light);
-                padding: 2rem;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-            }
+      .project {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 3px;
+        margin-bottom: 3px;
+        background-color: var(--color-dark);
+        border: 1px solid var(--color-dark);
+      }
 
-            .project-link {
-                color: var(--color-light);
-                padding: 2rem;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                text-decoration: none;
-                transition: all 0.3s ease;
-                text-align: center;
-                background-size: contain;
-                background-position: center;
-                background-repeat: no-repeat;
-                background-color: #eaeaea;
-                min-height: 180px;
-                position: relative;
-                overflow: hidden;
-            }
+      .project-content {
+        background-color: var(--color-light);
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
 
-            .project-link::before {
-                content: "";
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                background-image: inherit;
-                background-size: contain;
-                background-position: inherit;
-                background-repeat: inherit;
-                background-color: inherit;
-                z-index: 1;
-                pointer-events: none;
-            }
+      .project-link {
+        color: var(--color-light);
+        padding: 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        text-align: center;
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-color: #eaeaea;
+        min-height: 180px;
+        position: relative;
+        overflow: hidden;
+      }
 
-            .project-link > * {
-                position: relative;
-                z-index: 2;
-            }
+      .project-link::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: inherit;
+        background-size: contain;
+        background-position: inherit;
+        background-repeat: inherit;
+        background-color: inherit;
+        z-index: 1;
+        pointer-events: none;
+      }
 
-            .project-link.no-image::before {
-                display: none;
-            }
+      .project-link > * {
+        position: relative;
+        z-index: 2;
+      }
 
-            .project-link:hover {
-                filter: brightness(0.85);
-                outline: 2px solid var(--color-dark);
-            }
+      .project-link.no-image::before {
+        display: none;
+      }
 
-            .project h2 {
-                font-family: var(--family-special);
-                font-size: clamp(1.2rem, 3vw, 2rem);
-                font-weight: 400;
-                line-height: 1;
-                text-transform: uppercase;
-                margin-bottom: 1rem;
-            }
+      .project-link:hover {
+        filter: brightness(0.85);
+        outline: 2px solid var(--color-dark);
+      }
 
-            .project p {
-                font-size: clamp(0.9rem, 1.5vw, 1.1rem);
-                line-height: 1.4;
-            }
+      .project h2 {
+        font-family: var(--family-special);
+        font-size: clamp(1.2rem, 3vw, 2rem);
+        font-weight: 400;
+        line-height: 1;
+        text-transform: uppercase;
+        margin-bottom: 1rem;
+      }
 
-            .project-link h3 {
-                font-family: var(--family-special);
-                font-size: clamp(1rem, 2.5vw, 1.5rem);
-                font-weight: 400;
-                line-height: 1;
-                text-transform: uppercase;
-            }
+      .project p {
+        font-size: clamp(0.9rem, 1.5vw, 1.1rem);
+        line-height: 1.4;
+      }
 
-            .project-content p {
-                margin-bottom: 1.5rem;
-            }
+      .project-link h3 {
+        font-family: var(--family-special);
+        font-size: clamp(1rem, 2.5vw, 1.5rem);
+        font-weight: 400;
+        line-height: 1;
+        text-transform: uppercase;
+      }
 
-            .project-content ol {
-                border: 1px solid var(--color-dark);
-                padding: 1rem;
-                list-style-position: inside;
-            }
+      .project-content p {
+        margin-bottom: 1.5rem;
+      }
 
-            /* Footer */
-            footer {
-                text-align: center;
-                font-size: clamp(0.6rem, 1.5vmin, 0.9rem);
-                color: #666;
-                margin-top: 3rem;
-                padding-top: 2rem;
-                border-top: 1px solid #ccc;
-                width: 100%;
-                max-width: 1200px;
-            }
+      .project-content ol {
+        border: 1px solid var(--color-dark);
+        padding: 1rem;
+        list-style-position: inside;
+      }
 
-            /* Responsive */
-            @media (max-width: 768px) {
-                body {
-                    padding: 1rem;
-                }
+      /* Footer */
+      footer {
+        text-align: center;
+        font-size: clamp(0.6rem, 1.5vmin, 0.9rem);
+        color: #666;
+        margin-top: 3rem;
+        padding-top: 2rem;
+        border-top: 1px solid #ccc;
+        width: 100%;
+        max-width: 1200px;
+      }
 
-                .project {
-                    grid-template-columns: 1fr;
-                }
+      /* Responsive */
+      @media (max-width: 768px) {
+        body {
+          padding: 1rem;
+        }
 
-                .project-content,
-                .project-link {
-                    padding: 1.5rem;
-                }
-            }
+        .project {
+          grid-template-columns: 1fr;
+        }
 
-            @media (max-width: 480px) {
-                body {
-                    padding: 0.5rem;
-                }
+        .project-content,
+        .project-link {
+          padding: 1.5rem;
+        }
+      }
 
-                .project-content,
-                .project-link {
-                    padding: 1rem;
-                }
-            }
-        </style>
-    </head>
-    <body>
-        <header class="header">
-            <h1>Projects</h1>
-            <p>List of unfinished projects (aren't they all?)</p>
+      @media (max-width: 480px) {
+        body {
+          padding: 0.5rem;
+        }
+
+        .project-content,
+        .project-link {
+          padding: 1rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <h1>Projects</h1>
+      <p>List of unfinished projects (aren't they all?)</p>
+      <p>
+        I enjoy building things with new technologies that I get excited about.
+      </p>
+      <p>
+        The following project can be found on my
+        <a href="https://github.com/jwc20">GitHub</a>.
+      </p>
+    </header>
+
+    <main>
+      <ul class="projects">
+        <li class="project">
+          <div class="project-content">
+            <h2>twler & related</h2>
+
+            <p><a href="iwf-api.html">Read description</a></p>
+
+            <!-- <h3>Reference</h3> -->
+            <ol>
+              <li>
+                <a href="https://github.com/jwc20/twler">twler</a>
+              </li>
+              <li>
+                <a href="https://github.com/jwc20/iwf_api">iwf_api</a>
+              </li>
+              <li>
+                <a href="https://github.com/jwc20/iwf_ruby">iwf_ruby</a>
+              </li>
+              <li>
+                <a href="https://github.com/jwc20/trueskill-notes"
+                  >trueskill-notes</a
+                >
+              </li>
+              <li>
+                <a href="https://github.com/jwc20/twler-frontend-new"
+                  >twler-frontend-new</a
+                >
+              </li>
+              <li>
+                <a href="https://github.com/jwc20/twler-frontend"
+                  >twler-frontend</a
+                >
+              </li>
+              <li>
+                <a href="https://github.com/jwc20/twler-backend"
+                  >twler-backend</a
+                >
+              </li>
+              <li>
+                <a href="https://github.com/jwc20/wl_res">wl_res</a>
+              </li>
+              <li>
+                <a href="https://github.com/jwc20/iwf_clean_format_results"
+                  >iwf_clean_format_results</a
+                >
+              </li>
+              <li>
+                <a href="https://github.com/jwc20/py-ipfs-http-client"
+                  >py-ipfs-http-client</a
+                >
+              </li>
+            </ol>
+          </div>
+          <a
+            href="https://github.com/jwc20/twler"
+            class="project-link"
+            style="background-image: url('../img/twler.gif')"
+          >
+          </a>
+        </li>
+
+        <li class="project">
+          <div class="project-content">
+            <h2>TEARS & related</h2>
+
             <p>
-                I enjoy building things with new technologies that I get excited
-                about.
+              TEARS - Technology, Engineering, And Remote (or those liquid that
+              drop from your eyes when you look for a software engineering jobs
+              in 2025)
             </p>
+
+            <p><a href="tears.html">Read description</a></p>
+            <ol>
+              <li>
+                <a href="https://github.com/jwc20/tears_api">tears_api</a>
+              </li>
+              <li>
+                <a href="https://github.com/jwc20/tears-jobs">tears-jobs</a>
+              </li>
+              <li>
+                <a href="https://github.com/jwc20/tears-flask">tears-flask</a>
+              </li>
+              <li>
+                <a href="https://github.com/jwc20/prefect">prefect</a>
+              </li>
+              <li>
+                <a href="https://github.com/jwc20/changedetection.io"
+                  >changedetection.io</a
+                >
+              </li>
+            </ol>
+          </div>
+          <a
+            href="https://github.com/jwc20/tears_api"
+            class="project-link"
+            style="background-image: url('../img/tears.jpeg')"
+          >
+          </a>
+        </li>
+
+        <li class="project">
+          <div class="project-content">
+            <h2>stopwatch-ics</h2>
+            <p><a href="stopwatch-ics.html">Read description</a></p>
+            <ol>
+              <li>
+                <a href="https://inspiring-cupcake-f443e6.netlify.app/"
+                  >stopwatch-ics (Demo)</a
+                >
+              </li>
+              <li>
+                <a href="https://github.com/jwc20/stopwatch-ics"
+                  >stopwatch-ics (Github)</a
+                >
+              </li>
+            </ol>
+          </div>
+          <a
+            href="https://inspiring-cupcake-f443e6.netlify.app/"
+            class="project-link no-image"
+            style="background-image: url('../img/stopwatch-ics.gif')"
+          >
+          </a>
+        </li>
+
+        <li class="project">
+          <div class="project-content">
+            <h2>OnnuriMission</h2>
+            <p><a href="onnurimission.html">Read description</a></p>
+            <ol>
+              <li>
+                <a href="https://jwc20.github.io/OnnuriMission/"
+                  >OnnuriMission (Demo)</a
+                >
+              </li>
+              <li>
+                <a href="https://github.com/jwc20/OnnuriMission"
+                  >OnnuriMission (GitHub)</a
+                >
+              </li>
+            </ol>
+          </div>
+          <a
+            href="https://jwc20.github.io/OnnuriMission/"
+            class="project-link"
+            style="background-image: url('../img/onnuri-mission.jpg')"
+          >
+          </a>
+        </li>
+
+        <li class="project">
+          <div class="project-content">
+            <h2>barbell loading calculator</h2>
             <p>
-                The following project can be found on my
-                <a href="https://github.com/jwc20">GitHub</a>.
+              <a href="barbell-loading-calculator.html">Read description</a>
             </p>
-        </header>
+            <ol>
+              <li>
+                <a href="https://editor.p5js.org/jcw00/full/PnIhXM3qC"
+                  >barbellLoadingCalculator (Demo)</a
+                >
+              </li>
+              <li>
+                <a href="https://github.com/jwc20/barbellLoadingCalculator"
+                  >barbellLoadingCalculator (Github)</a
+                >
+              </li>
+            </ol>
+          </div>
+          <a
+            href="https://editor.p5js.org/jcw00/full/PnIhXM3qC"
+            class="project-link"
+            style="background-image: url('../img/barbell-calculator.jpg')"
+          >
+          </a>
+        </li>
 
-        <main>
-            <ul class="projects">
-                <li class="project">
-                    <div class="project-content">
+        <li class="project">
+          <div class="project-content">
+            <h2>tic tac toe with react</h2>
+            <p>
+              <a href="tic-tac-toe-react.html">Read description</a>
+            </p>
+            <ol>
+              <li>
+                <a href="https://jwc20-tttr.netlify.app/"
+                  >tic-tac-toe-react (Demo)</a
+                >
+              </li>
+              <li>
+                <a href="https://github.com/jwc20/tic-tac-toe-react"
+                  >tic-tac-toe-react (Github)</a
+                >
+              </li>
+            </ol>
+          </div>
+          <a
+            href="https://jwc20-tttr.netlify.app/"
+            class="project-link"
+            style="background-image: url('../img/tictactoe-react.gif')"
+          >
+          </a>
+        </li>
 
-                        <h2>twler & related</h2>
+        <li class="project">
+          <div class="project-content">
+            <h2>Leetcode logging</h2>
+            <p>
+              <a href="leetcode-logging.html">Read description</a>
+            </p>
+            <ol>
+              <li>
+                <a href="https://github.com/jwc20/fluffy-fortnight"
+                  >fluffy-fortnight</a
+                >
+              </li>
+            </ol>
+          </div>
+          <a
+            href="https://github.com/jwc20/fluffy-fortnight"
+            class="project-link"
+            style="background-image: url('../img/fluffy-fortnight.jpg')"
+          >
+          </a>
+        </li>
 
-                        <p><a href="iwf-api.html">Read description</a></p>
+        <li class="project">
+          <div class="project-content">
+            <h2>Profanity Detector for Twitch Chat & related</h2>
+            <p>
+              <a href="toxicity-detector-twitch.html">Read description</a>
+            </p>
+            <ol>
+              <li>
+                <a href="https://github.com/jwc20/twitch-chat-archive"
+                  >twitch-chat-archive</a
+                >
+              </li>
+              <li>
+                <a href="https://github.com/jwc20/twitch2firestore"
+                  >twitch2firestore</a
+                >
+              </li>
+              <li>
+                <a href="https://omf-scene24.vercel.app/wsTest"
+                  >omfScene24 (Demo)</a
+                >
+              </li>
+              <li>
+                <a href="https://github.com/jwc20/omfScene24"
+                  >omfScene24 (Github)</a
+                >
+              </li>
+              <li>
+                <a href="https://github.com/jwc20/get-twitch-emotes"
+                  >get-twitch-emotes</a
+                >
+              </li>
+              <li>
+                <a href="https://github.com/jwc20/chat-analyzer-for-twitch"
+                  >chat-analyzer-for-twitch</a
+                >
+              </li>
+              <li>
+                <a href="https://github.com/jwc20/vowpal-wabbit-notebook"
+                  >vowpal-wabbit-notebook</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://github.com/jwc20/toxicity-and-profanity-notebook"
+                  >toxicity-and-profanity-notebook</a
+                >
+              </li>
+            </ol>
+          </div>
+          <a
+            href="https://omf-scene24.vercel.app/wsTest"
+            class="project-link"
+            style="background-image: url('../img/omfscene24.jpg')"
+          >
+          </a>
+        </li>
 
-                        <!-- <h3>Reference</h3> -->
-                        <ol>
-                            <li>
-                                <a href="https://github.com/jwc20/twler"
-                                    >twler</a
-                                >
-                            </li>
-                            <li>
-                                <a href="https://github.com/jwc20/iwf_api"
-                                    >iwf_api</a
-                                >
-                            </li>
-                            <li>
-                                <a href="https://github.com/jwc20/iwf_ruby"
-                                    >iwf_ruby</a
-                                >
-                            </li>
-                            <li>
-                                <a
-                                    href="https://github.com/jwc20/trueskill-notes"
-                                    >trueskill-notes</a
-                                >
-                            </li>
-                            <li>
-                                <a
-                                    href="https://github.com/jwc20/twler-frontend-new"
-                                    >twler-frontend-new</a
-                                >
-                            </li>
-                            <li>
-                                <a
-                                    href="https://github.com/jwc20/twler-frontend"
-                                    >twler-frontend</a
-                                >
-                            </li>
-                            <li>
-                                <a href="https://github.com/jwc20/twler-backend"
-                                    >twler-backend</a
-                                >
-                            </li>
-                            <li>
-                                <a href="https://github.com/jwc20/wl_res"
-                                    >wl_res</a
-                                >
-                            </li>
-                            <li>
-                                <a
-                                    href="https://github.com/jwc20/iwf_clean_format_results"
-                                    >iwf_clean_format_results</a
-                                >
-                            </li>
-                            <li>
-                                <a
-                                    href="https://github.com/jwc20/py-ipfs-http-client"
-                                    >py-ipfs-http-client</a
-                                >
-                            </li>
-                        </ol>
-                    </div>
-                    <a
-                        href="https://github.com/jwc20/twler"
-                        class="project-link"
-                        style="background-image: url('../img/twler.gif')"
-                    >
-                    </a>
-                </li>
+        <li class="project">
+          <div class="project-content">
+            <h2>Other Scrapers</h2>
+            <p><a href="other-scrapers.html">Read description</a></p>
+            <ol>
+              <li>
+                <a href="https://github.com/jwc20/waasuapi">waasuapi</a>
+              </li>
+              <li>
+                <a href="https://github.com/jwc20/fcisapi">fcisapi</a>
+              </li>
+              <li>
+                <a href="https://github.com/jwc20/wellfound-scraper"
+                  >wellfound-scraper</a
+                >
+              </li>
+              <li>
+                <a href="https://github.com/jwc20/linkedin-scraper-jobs"
+                  >linkedin-scraper-jobs</a
+                >
+              </li>
+              <li>
+                <a href="https://github.com/jwc20/jaapi">job aggregate api</a>
+              </li>
+            </ol>
+          </div>
+          <a
+            href="https://github.com/jwc20/waasuapi"
+            class="project-link"
+            style="background-image: url('../img/waasu-api.jpg')"
+          >
+          </a>
+        </li>
 
-                <li class="project">
-                    <div class="project-content">
-                        <h2>TEARS & related</h2>
+        <li class="project">
+          <div class="project-content">
+            <h2>get-channel-talk</h2>
+            <p><a href="get-channel-talk.html">Read description</a></p>
+            <ol>
+              <li>
+                <a href="https://github.com/jwc20/get-channel-talk"
+                  >get-channel-talk</a
+                >
+              </li>
+            </ol>
+          </div>
+          <a
+            href="https://github.com/jwc20/get-channel-talk"
+            class="project-link"
+            style="background-image: url('../img/get-channel-talk.png')"
+          >
+          </a>
+        </li>
 
-                        <p>TEARS - Technology, Engineering, And Remote (or those liquid that drop from your eyes when you look for a software engineering jobs in 2025)</p>
+        <li class="project">
+          <div class="project-content">
+            <h2>config file</h2>
+            <p>My config dotfiles for Neovim, Fish, and etc.</p>
+            <ol>
+              <li>
+                <a href="https://github.com/jwc20/config">config</a>
+              </li>
+            </ol>
+          </div>
+          <a
+            href="https://github.com/jwc20/config"
+            class="project-link"
+            style="background-image: url('../img/wall-and-gromit-1.png')"
+          >
+          </a>
+        </li>
 
-                        <p><a href="tears.html">Read description</a></p>
-                        <ol>
-                            <li>
-                                <a href="https://github.com/jwc20/tears_api"
-                                    >tears_api</a
-                                >
-                            </li>
-                            <li>
-                                <a href="https://github.com/jwc20/tears-jobs"
-                                    >tears-jobs</a
-                                >
-                            </li>
-                            <li>
-                                <a href="https://github.com/jwc20/tears-flask"
-                                    >tears-flask</a
-                                >
-                            </li>
-                            <li>
-                                <a href="https://github.com/jwc20/prefect"
-                                    >prefect</a
-                                >
-                            </li>
-                            <li>
-                                <a
-                                    href="https://github.com/jwc20/changedetection.io"
-                                    >changedetection.io</a
-                                >
-                            </li>
-                        </ol>
-                    </div>
-                    <a
-                        href="https://github.com/jwc20/tears_api"
-                        class="project-link"
-                        style="background-image: url('../img/tears.jpeg')"
-                    >
-                    </a>
-                </li>
+        <li class="project">
+          <div class="project-content">
+            <h2>Other</h2>
+            <ol>
+              <li>
+                <a href="https://github.com/jwc20/wagon-wheel-hotel"
+                  >wagon-wheel-hotel</a
+                >
+              </li>
+              <li>
+                <a href="https://github.com/jwc20/appointment-assist-frontend"
+                  >appointment-assist-frontend</a
+                >
+              </li>
+              <li>
+                <a href="https://github.com/jwc20/Pet-Adoption-SPA"
+                  >Pet-Adoption-SPA</a
+                >
+              </li>
+              <li>
+                <a href="https://github.com/jwc20/people-of-middle-earth"
+                  >people-of-middle-earth</a
+                >
+              </li>
+              <li>
+                <a href="https://jwc20.github.io/my-cool-website/pages/old.html"
+                  >old homepage (do not click!)</a
+                >
+              </li>
+            </ol>
+          </div>
+          <a
+            href="https://jwc20.github.io/my-cool-website/pages/old.html"
+            class="project-link"
+            style="background-image: url('../img/old-homepage.jpg')"
+          >
+          </a>
+        </li>
+      </ul>
+    </main>
 
-                <li class="project">
-                    <div class="project-content">
-                        <h2>stopwatch-ics</h2>
-                        <p><a href="stopwatch-ics.html">Read description</a></p>
-                        <ol>
-                            <li>
-                                <a
-                                    href="https://inspiring-cupcake-f443e6.netlify.app/"
-                                    >stopwatch-ics (Demo)</a
-                                >
-                            </li>
-                            <li>
-                                <a href="https://github.com/jwc20/stopwatch-ics"
-                                    >stopwatch-ics (Github)</a
-                                >
-                            </li>
-                        </ol>
-                    </div>
-                    <a
-                        href="https://inspiring-cupcake-f443e6.netlify.app/"
-                        class="project-link no-image"
-                        style="
-                            background-image: url('../img/stopwatch-ics.gif');
-                        "
-                    >
-                    </a>
-                </li>
-
-                <li class="project">
-                    <div class="project-content">
-                        <h2>OnnuriMission</h2>
-                        <p><a href="onnurimission.html">Read description</a></p>
-                        <ol>
-                            <li>
-                                <a href="https://jwc20.github.io/OnnuriMission/"
-                                    >OnnuriMission (Demo)</a
-                                >
-                            </li>
-                            <li>
-                                <a href="https://github.com/jwc20/OnnuriMission"
-                                    >OnnuriMission (GitHub)</a
-                                >
-                            </li>
-                        </ol>
-                    </div>
-                    <a
-                        href="https://jwc20.github.io/OnnuriMission/"
-                        class="project-link"
-                        style="
-                            background-image: url('../img/onnuri-mission.jpg');
-                        "
-                    >
-                    </a>
-                </li>
-
-                <li class="project">
-                    <div class="project-content">
-                        <h2>barbell loading calculator</h2>
-                        <p>
-                            <a href="barbell-loading-calculator.html"
-                                >Read description</a
-                            >
-                        </p>
-                        <ol>
-                            <li>
-
-                                <a href="https://editor.p5js.org/jcw00/full/PnIhXM3qC"
-
-                                    >barbellLoadingCalculator (Demo)</a
-                                >
-                            </li>
-                            <li>
-                                <a
-                                    href="https://github.com/jwc20/barbellLoadingCalculator"
-                                    >barbellLoadingCalculator (Github)</a
-                                >
-                            </li>
-                        </ol>
-                    </div>
-                    <a
-
-                        href="https://editor.p5js.org/jcw00/full/PnIhXM3qC"
-
-                        class="project-link"
-                        style="
-                            background-image: url('../img/barbell-calculator.jpg');
-                        "
-                    >
-                    </a>
-                </li>
-
-                <li class="project">
-                    <div class="project-content">
-                        <h2>tic tac toe with react</h2>
-                        <p>
-                            <a href="tic-tac-toe-react.html"
-                                >Read description</a
-                            >
-                        </p>
-                        <ol>
-                            <li>
-                                <a href="https://jwc20-tttr.netlify.app/"
-                                    >tic-tac-toe-react (Demo)</a
-                                >
-                            </li>
-                            <li>
-                                <a
-                                    href="https://github.com/jwc20/tic-tac-toe-react"
-                                    >tic-tac-toe-react (Github)</a
-                                >
-                            </li>
-                        </ol>
-                    </div>
-                    <a
-                        href="https://jwc20-tttr.netlify.app/"
-                        class="project-link"
-                        style="
-                            background-image: url('../img/tictactoe-react.gif');
-                        "
-                    >
-                    </a>
-                </li>
-
-                <li class="project">
-                    <div class="project-content">
-
-                        <h2>Leetcode logging</h2>
-                        <p>
-                            <a href="leetcode-logging.html">Read description</a>
-                        </p>
-                        <ol>
-                            <li>
-                                <a
-                                    href="https://github.com/jwc20/fluffy-fortnight"
-                                    >fluffy-fortnight</a
-                                >
-                            </li>
-                        </ol>
-                    </div>
-                    <a
-                        href="https://github.com/jwc20/fluffy-fortnight"
-                        class="project-link"
-                        style="
-                            background-image: url('../img/fluffy-fortnight.jpg');
-                        "
-                    >
-                    </a>
-                </li>
-
-                <li class="project">
-                    <div class="project-content">
-                        <h2>Profanity Detector for Twitch Chat & related</h2>
-                        <p>
-                            <a href="toxicity-detector-twitch.html"
-                                >Read description</a
-                            >
-                        </p>
-                        <ol>
-                            <li>
-                                <a
-                                    href="https://github.com/jwc20/twitch-chat-archive"
-                                    >twitch-chat-archive</a
-                                >
-                            </li>
-                            <li>
-                                <a
-                                    href="https://github.com/jwc20/twitch2firestore"
-                                    >twitch2firestore</a
-                                >
-                            </li>
-                            <li>
-                                <a href="https://omf-scene24.vercel.app/wsTest"
-                                    >omfScene24 (Demo)</a
-                                >
-                            </li>
-                            <li>
-                                <a href="https://github.com/jwc20/omfScene24"
-                                    >omfScene24 (Github)</a
-                                >
-                            </li>
-                            <li>
-                                <a
-                                    href="https://github.com/jwc20/get-twitch-emotes"
-                                    >get-twitch-emotes</a
-                                >
-                            </li>
-                            <li>
-                                <a
-                                    href="https://github.com/jwc20/chat-analyzer-for-twitch"
-                                    >chat-analyzer-for-twitch</a
-                                >
-                            </li>
-                            <li>
-                                <a
-                                    href="https://github.com/jwc20/vowpal-wabbit-notebook"
-                                    >vowpal-wabbit-notebook</a
-                                >
-                            </li>
-                            <li>
-                                <a
-                                    href="https://github.com/jwc20/toxicity-and-profanity-notebook"
-                                    >toxicity-and-profanity-notebook</a
-                                >
-                            </li>
-                        </ol>
-                    </div>
-                    <a
-                        href="https://omf-scene24.vercel.app/wsTest"
-                        class="project-link"
-                        style="background-image: url('../img/omfscene24.jpg')"
-                    >
-                    </a>
-                </li>
-
-                <li class="project">
-                    <div class="project-content">
-                        <h2>Other Scrapers</h2>
-                        <p><a href="other-scrapers.html">Read description</a></p>
-                        <ol>
-                            <li>
-                                <a href="https://github.com/jwc20/waasuapi"
-                                    >waasuapi</a
-                                >
-                            </li>
-                            <li>
-                                <a href="https://github.com/jwc20/fcisapi"
-                                    >fcisapi</a
-                                >
-                            </li>
-                            <li>
-                                <a
-                                    href="https://github.com/jwc20/wellfound-scraper"
-                                    >wellfound-scraper</a
-                                >
-                            </li>
-                            <li>
-                                <a
-                                    href="https://github.com/jwc20/linkedin-scraper-jobs"
-                                    >linkedin-scraper-jobs</a
-                                >
-                            </li>
-                            <li>
-                                <a
-                                    href="https://github.com/jwc20/jaapi"
-                                    >job aggregate api</a
-                                >
-                            </li>
-                        </ol>
-                    </div>
-                    <a
-                        href="https://github.com/jwc20/waasuapi"
-                        class="project-link"
-                        style="background-image: url('../img/waasu-api.jpg')"
-                    >
-                    </a>
-                </li>
-
-                <li class="project">
-                    <div class="project-content">
-                        <h2>get-channel-talk</h2>
-                        <p><a href="get-channel-talk.html">Read description</a></p>
-                        <ol>
-                            <li>
-                                <a
-                                    href="https://github.com/jwc20/get-channel-talk"
-                                    >get-channel-talk</a
-                                >
-                            </li>
-                        </ol>
-                    </div>
-                    <a
-                        href="https://github.com/jwc20/get-channel-talk"
-                        class="project-link"
-                        style="
-                            background-image: url('../img/get-channel-talk.png');
-                        "
-                    >
-                    </a>
-                </li>
-
-                <li class="project">
-                    <div class="project-content">
-                        <h2>config file</h2>
-                        <p>My config dotfiles for Neovim, Fish, and etc.</p>
-                        <ol>
-                            <li>
-                                <a href="https://github.com/jwc20/config"
-                                    >config</a
-                                >
-                            </li>
-                        </ol>
-                    </div>
-                    <a
-                        href="https://github.com/jwc20/config"
-                        class="project-link"
-                        style="
-                            background-image: url('../img/wall-and-gromit-1.png');
-                        "
-                    >
-                    </a>
-                </li>
-
-                <li class="project">
-                    <div class="project-content">
-                        <h2>Other</h2>
-                        <ol>
-                            <li>
-                                <a
-                                    href="https://github.com/jwc20/wagon-wheel-hotel"
-                                    >wagon-wheel-hotel</a
-                                >
-                            </li>
-                            <li>
-                                <a
-                                    href="https://github.com/jwc20/appointment-assist-frontend"
-                                    >appointment-assist-frontend</a
-                                >
-                            </li>
-                            <li>
-                                <a
-                                    href="https://github.com/jwc20/Pet-Adoption-SPA"
-                                    >Pet-Adoption-SPA</a
-                                >
-                            </li>
-                            <li>
-                                <a
-                                    href="https://github.com/jwc20/people-of-middle-earth"
-                                    >people-of-middle-earth</a
-                                >
-                            </li>
-                            <li>
-                                <a
-                                    href="https://jwc20.github.io/my-cool-website/pages/old.html"
-                                    >old homepage (do not click!)</a
-                                >
-                            </li>
-                        </ol>
-                    </div>
-                    <a
-                        href="https://jwc20.github.io/my-cool-website/pages/old.html"
-                        class="project-link"
-                        style="background-image: url('../img/old-homepage.jpg')"
-                    >
-                    </a>
-                </li>
-            </ul>
-        </main>
-
-
-        <footer>
-          <p><a href="../index.html">&larr; Back to Home</a></p>
-      </footer>
-    </body>
+    <footer>
+      <p><a href="../index.html">&larr; Back to Home</a></p>
+    </footer>
+  </body>
 </html>
