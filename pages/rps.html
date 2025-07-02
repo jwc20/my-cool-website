@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>OnnuriMission - Project Description</title>
+        <link rel="stylesheet" href="../styles.css" />
+        <!-- Google tag (gtag.js) -->
+        <script
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=G-X89EB479GX"
+        ></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag("js", new Date());
+
+            gtag("config", "G-X89EB479GX");
+        </script>
+        <script
+            type="module"
+            src="https://cdn.jsdelivr.net/npm/zero-md@3?register"
+        ></script>
+
+        <style>
+            body {
+                min-height: 100vh;
+                padding: 2rem;
+                background-color: #fafafa;
+                color: #000;
+                font-family: Georgia, serif;
+                line-height: 1.5;
+                max-width: 800px;
+                margin: 0 auto;
+            }
+            .header {
+                text-align: center;
+                margin-bottom: 2rem;
+            }
+            .header h1 {
+                font-family: "Staatliches", Impact, serif;
+                font-size: 2.5rem;
+                margin-bottom: 0.5rem;
+            }
+            .header p {
+                font-size: 1.1rem;
+                color: #444;
+            }
+            .content {
+                background: #fff;
+                border-radius: 8px;
+                box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+                padding: 2rem;
+            }
+            h1,
+            h2 {
+                font-family: "Staatliches", Impact, serif;
+            }
+            footer {
+                text-align: center;
+                font-size: 0.9rem;
+                color: #666;
+                margin-top: 3rem;
+                padding-top: 2rem;
+                border-top: 1px solid #ccc;
+            }
+            @media (max-width: 600px) {
+                body {
+                    padding: 1rem;
+                }
+                .content {
+                    padding: 1rem;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <header class="header">
+            <h1>Rock, Paper, Scissor, and more</h1>
+        </header>
+        <main id="content" class="content"></main>
+        <script src="https://cdn.jsdelivr.net/npm/marked/lib/marked.umd.js"></script>
+        <script>
+            fetch('rps.md')
+                .then(response => response.text())
+                .then(text => {
+                    document.getElementById('content').innerHTML = marked.parse(text);
+                });
+        </script>
+        <footer>
+            <p><a href="projects.html">&larr; Back to Projects</a></p>
+        </footer>
+    </body>
+</html>
