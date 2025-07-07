@@ -1,5 +1,5 @@
-# rock paper scissors
+# rock paper scissors - RPS
 
-asdasdasdasdasd
+A python library I made to simulate large players and multi-action (rock, paper, scissors, Spock, Lizard, ...) RPS Game.
 
-test
+work in progress...
